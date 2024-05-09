@@ -1,0 +1,40 @@
+<div
+  id="menu"
+  class="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen overflow-y-scroll"
+>
+  <div id="logo" class="my-4 px-6">
+    <h1 class="text-lg md:text-2xl font-bold text-white">
+      Dash<span class="text-blue-500">8</span>.
+    </h1>
+    <p class="text-slate-500 text-sm">Manage your actions and activities</p>
+  </div>
+  <div id="profile" class="px-6 py-10">
+    <p class="text-slate-500">Welcome back,</p>
+    <a href="#" class="inline-flex space-x-2 items-center">
+      <span>
+        <img
+          class="rounded-full w-8 h-8"
+          src="https://scontent.fgua3-4.fna.fbcdn.net/v/t39.30808-1/427827661_1052481242708538_2429350605951847043_n.jpg?stp=cp6_dst-jpg_p320x320&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Dk1GiWHTB1wAX9m4aml&_nc_ht=scontent.fgua3-4.fna&oh=00_AfAxaWa_69Abx3qU400EZlcQQ4poXjJgFRkMX4pXr74PlQ&oe=65FB469F"
+          alt=""
+        />
+      </span>
+      <span class="text-sm md:text-base font-bold"> Andre Salvador </span>
+    </a>
+  </div>
+  <div id="nav" class="w-full px-6">
+    @for (item of menuItems; track $index) {
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="bg-blue-800"
+        href="#"
+        class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150"
+      >
+        <div class="flex flex-col">
+          <span class="text-lg font-bold leading-5 text-white">{{item.title}}</span>
+          <span class="text-sm text-white/50 hidden md:block">{{item.path}}</span>
+        </div>
+      </a>
+
+    }
+  </div>
+</div>

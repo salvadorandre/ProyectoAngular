@@ -1,0 +1,12 @@
+<app-title title="User" withShadow/>
+@if(user()) { 
+    <section>
+        <img  [srcset]="user()!.avatar" alt="">
+        <div>
+            <h3>{{user()?.first_name}} - {{user()?.last_name}}</h3>
+            <h3>{{user()?.email}}</h3>
+        </div>
+    </section>
+}@else {
+    <p>loading....</p>
+}

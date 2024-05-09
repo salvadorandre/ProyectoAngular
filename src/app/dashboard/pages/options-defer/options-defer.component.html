@@ -1,0 +1,71 @@
+<app-title title="Options defer" withShadow/>
+
+<section>
+    <h1 class="text-xl">Interacciones</h1>
+    <hr class="my-2">
+
+    @defer(on interaction ) { 
+        <heavy-fast cssClass="bg-blue-500">
+            <span>Tu madre we</span>
+        </heavy-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">Click en el div</div>
+    }
+
+  
+</section>
+
+<section>
+    <h1 class="text-xl">Defer Click</h1>
+    <hr class="my-2">
+
+    <button #btnInteraction class="p-2 bg-blue-500 hover:bg-blue-700 transition-all rounded text-white my-2">
+        click me
+    </button>
+
+    @defer(on interaction( btnInteraction ) ) { 
+        <heavy-fast cssClass="bg-blue-500">
+            <span>Tu madre we</span>
+        </heavy-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">placeholder div</div>
+    }
+
+  
+</section>
+
+<section>
+    <h1 class="text-xl">Hover</h1>
+    <hr class="my-2">
+
+ 
+    @defer(on hover ) { 
+        <heavy-fast cssClass="bg-blue-500">
+            <span>Tu madre we</span>
+        </heavy-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">hiciste hover pana</div>
+    }
+
+  
+</section>
+
+
+<section>
+    <h1 class="text-xl">Immediate</h1>
+    <hr class="my-2">
+
+
+
+    @defer(on immediate ) { 
+        <heavy-fast cssClass="bg-blue-500">
+            <span>Tu madre we</span>
+        </heavy-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">Deprisa</div>
+    }
+
+  
+</section>
+
+

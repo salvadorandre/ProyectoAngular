@@ -1,0 +1,19 @@
+<app-title title="Lista de usuarios" withShadow/>
+
+
+
+<ul>
+    @for(user of userService.users(); track user.id) { 
+        <li class="flex items-center my-2 cursor-pointer">
+            <img [srcset]="user.avatar" [alt]="user.first_name" class="rounded w-14">
+            <div >
+                <a class="mx-5 hover:underline" [routerLink]="['/dashboard/user', user.id]" >{{user.first_name}}  {{user.last_name}}</a>
+                <h6 class="mx-5">{{user.email}}</h6>
+            </div>
+            
+        </li>
+    }
+    @empty {
+        <h1>Cargando data...</h1>
+    }
+</ul>
